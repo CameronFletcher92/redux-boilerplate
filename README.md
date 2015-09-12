@@ -25,6 +25,6 @@ npm install
 ```
 npm run clean - cleans the build directory
 npm run build - builds a production ready index.html and bundle.js
-npm run start - run the server in production mode (serves the files build from build)
+npm run start - run the server in production mode (serves the files built from 'npm run build')
 npm run dev   - run the server in development mode with hotloading and injected redux devtools
 ```
