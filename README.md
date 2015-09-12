@@ -8,11 +8,6 @@ Boilerplate for a simple React counter application using:
 * **[redux](https://github.com/rackt/redux)** for state management
 * **[redux-devtools](https://github.com/gaearon/redux-devtools)** for action logging and time travelly goodness
 
-## Demo of Redux Devtools
-
-![](http://i.imgur.com/J4GeW0M.gif)
-
-
 ## Getting Started
 
 ```
@@ -28,3 +23,11 @@ npm run build - builds a production ready index.html and bundle.js
 npm run start - run the server in production mode (serves the files built from 'npm run build')
 npm run dev   - run the server in development mode with hotloading and injected redux devtools
 ```
+
+## Demo of Redux Devtools
+
+![](http://i.imgur.com/J4GeW0M.gif)
+
+## Demo of React Transform
+
+![](http://i.imgur.com/AhGY28T.gif)

@@ -15,7 +15,7 @@ export function decrement(amount = 1) {
   }
 }
 
-export function incrementIfOdd(amount = 1) {
+export function incrementIfOdd() {
   return (dispatch, getState) => {
     const { counter } = getState()
 
@@ -23,7 +23,7 @@ export function incrementIfOdd(amount = 1) {
       return
     }
 
-    dispatch(increment(amount))
+    dispatch(increment(1))
   }
 }
 

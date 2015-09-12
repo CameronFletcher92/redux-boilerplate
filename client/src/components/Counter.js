@@ -9,11 +9,11 @@ class Counter extends Component {
         <p>
           Count: {count}
           {' '}
-          <button onClick={() => increment(5)}>+</button>
+          <button onClick={() => increment(1)}>+</button>
           {' '}
-          <button onClick={() => decrement(5)}>-</button>
+          <button onClick={() => decrement(1)}>-</button>
           {' '}
-          <button onClick={() => incrementIfOdd(5)}>Increment if odd</button>
+          <button onClick={() => incrementIfOdd()}>Increment if odd</button>
           {' '}
           <button onClick={() => incrementAsync()}>Increment async</button>
         </p>

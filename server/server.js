@@ -5,9 +5,9 @@ var config = require('../config/webpack.dev.config')
 var app = express()
 var compiler = webpack(config)
 
-// enable hotloading for dev server
+// enable hotloading for dev server in development environment
 if(process.env.NODE_ENV == 'development') {
-  console.log('using hot loading server')
+  console.log('Enabling hotloading and injecting redux dev tools')
   app.use(require('webpack-dev-middleware')(compiler, {
       noInfo: true,
       publicPath: config.output.publicPath
@@ -16,7 +16,7 @@ if(process.env.NODE_ENV == 'development') {
   app.use(require('webpack-hot-middleware')(compiler))
 }
 
-// otherwise just serve the static assets
+// static routes
 app.get('/bundle.js', function(req, res) {
   console.log('sending build/bundle.js')
   res.sendFile('bundle.js', {root: './client/build/'})
