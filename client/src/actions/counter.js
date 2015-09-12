@@ -1,27 +1,29 @@
 export const INCREMENT_COUNTER = 'INCREMENT_COUNTER'
 export const DECREMENT_COUNTER = 'DECREMENT_COUNTER'
 
-export function increment() {
+export function increment(amount = 1) {
   return {
-    type: INCREMENT_COUNTER
+    type: INCREMENT_COUNTER,
+    amount
   }
 }
 
-export function decrement() {
+export function decrement(amount = 1) {
   return {
-    type: DECREMENT_COUNTER
+    type: DECREMENT_COUNTER,
+    amount
   }
 }
 
-export function incrementIfOdd() {
+export function incrementIfOdd(amount = 1) {
   return (dispatch, getState) => {
     const { counter } = getState()
 
-    if (counter % 2 === 0) {
+    if (counter.count % 2 === 0) {
       return
     }
 
-    dispatch(increment())
+    dispatch(increment(amount))
   }
 }
 
