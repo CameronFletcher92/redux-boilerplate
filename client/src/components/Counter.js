@@ -7,7 +7,7 @@ class Counter extends Component {
       <div>
         <p> {label} </p>
         <p>
-          Clicked: {count} times
+          Count: {count}
           {' '}
           <button onClick={() => increment(5)}>+</button>
           {' '}
@@ -15,13 +15,13 @@ class Counter extends Component {
           {' '}
           <button onClick={() => incrementIfOdd(5)}>Increment if odd</button>
           {' '}
-          <button onClick={() => incrementAsync(5)}>Increment async</button>
+          <button onClick={() => incrementAsync()}>Increment async</button>
         </p>
       </div>
     )
   }
 }
-// <button onClick={() => incrementAsync()}>Increment async</button>
+
 Counter.propTypes = {
   increment: PropTypes.func.isRequired,
   incrementIfOdd: PropTypes.func.isRequired,
